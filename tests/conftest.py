@@ -7,10 +7,10 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import genex
 import power
 
 import caption
-import genex
 
 pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
 
