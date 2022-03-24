@@ -73,11 +73,12 @@ class CaptionPageProcessor:
             if not selected:
                 utila.info(f'could not find caption for: {bounding}')
                 continue
-            caption = self.create_caption(
-                selected,
-                overlap=overlap,
-            )
-            result.append(caption)
+            for caption in try_split(selected, overlap=overlap):
+                caption = self.create_caption(
+                    caption,
+                    overlap=overlap,
+                )
+                result.append(caption)
         return result
 
     def search_pageafter(self, y1, page, page_next):
@@ -119,6 +120,56 @@ class CaptionPageProcessor:
     @abc.abstractmethod
     def validate_before(self, items):
         pass
+
+
+def try_split(selected, overlap: bool = False) -> list:  # pylint:disable=W0613
+    """Try to split first line by approximatly the half and run matcher
+    on the right side.
+
+    If this matching is done correctly, split right side and handle both
+    as to separate captions.
+
+    If this matching does not work, return already selected item as a
+    single caption for further processing.
+    """
+    # TODO: WHAT A HACK
+    items, matched = selected
+    if len(items) == 1:
+        # do not run double detection for a single line. We expect more
+        # false detection cause double captions requires some space to
+        # present some information.
+        return [selected]
+    firstline = items[0][1]
+    # split text approximately by the half
+    halfline = int(len(firstline.text) / 2.2)
+    right = firstline.text[halfline:]
+    # remove expected line start from pattern to match inside text
+    pattern = utila.compiles(matched.re.pattern.lstrip(' ^\n'))
+    searched = pattern.search(right)
+    if not searched:
+        return [selected]
+    startpos = halfline + searched.start()
+    splitted = texmex.splitby_count(
+        firstline,
+        counts=(startpos, len(firstline.text)),
+    )
+    # TODO: LINE INDEXING IS NOT CORRECT ANYMORE
+    left, right = [(items[0][0], splitted[0])], [(items[0][0] + 1, splitted[1])]
+    for index, item in enumerate(items[1:], start=1):
+        # give the rest of the items to the left and to the right caption
+        if index % 2:
+            left.append(item)
+        else:
+            right.append(item)
+    # set search index inside splitted text to adjust text extraction in
+    # later using `searched`
+    searched = pattern.search(firstline.text[halfline + searched.start():])
+    # return two captions
+    result = [
+        (left, matched),
+        (right, searched),
+    ]
+    return result
 
 
 # Bounding is on the bottom of the page. We do not check the next page for
