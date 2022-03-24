@@ -73,8 +73,11 @@ class CaptionPageProcessor:
             if not selected:
                 utila.info(f'could not find caption for: {bounding}')
                 continue
-            item = self.create_caption(selected, overlap=overlap)
-            result.append(item)
+            caption = self.create_caption(
+                selected,
+                overlap=overlap,
+            )
+            result.append(caption)
         return result
 
     def search_pageafter(self, y1, page, page_next):
