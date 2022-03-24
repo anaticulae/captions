@@ -44,6 +44,7 @@ if __name__ == "__main__":
         ],
         packages=[
             'caption',
+            'caption.feature',
         ],
         entry_points={
             'console_scripts': ['caption = caption.cli:main'],
