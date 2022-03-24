@@ -16,7 +16,7 @@ import tests
 import tests.utils
 
 
-def test_caption_cli_help(monkeypatch):
+def test_cli_help(monkeypatch):
     tests.run('--help', monkeypatch=monkeypatch)
 
 
@@ -24,7 +24,7 @@ def test_caption_cli_help(monkeypatch):
     (18, 1),
     (21, 2),
 ])
-def test_caption_bachelor90px(page, expected, testdir, monkeypatch):
+def test_bachelor90px(page, expected, testdir, monkeypatch):
     source = power.BACHELOR090_PDF
     extracted = tests.utils.extract_captions(
         source,
@@ -36,7 +36,7 @@ def test_caption_bachelor90px(page, expected, testdir, monkeypatch):
     assert len(content) == expected
 
 
-def test_caption_bachelor90p80(testdir, monkeypatch):
+def test_bachelor90p80(testdir, monkeypatch):
     source = power.BACHELOR090_PDF
     extracted = tests.utils.extract_captions(
         source,
@@ -49,7 +49,7 @@ def test_caption_bachelor90p80(testdir, monkeypatch):
     assert len(tables) == 1, str(tables)
 
 
-def test_caption_master116p12(testdir, monkeypatch):
+def test_master116p12(testdir, monkeypatch):
     source = power.MASTER116_PDF
     extracted = tests.utils.extract_captions(
         source,

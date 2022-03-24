@@ -40,7 +40,7 @@ ARCHIVE = utila.join(caption.ROOT, 'tests/expected', exist=True)
     pytest.param(power.MASTER116_PDF, 'master116', id='master116'),
 ])
 @utilatest.longrun
-def test_caption_validate(source, expected, testdir, monkeypatch):
+def test_validate(source, expected, testdir, monkeypatch):
     utilatest.fixture_requires(source)
     Evaluate(
         source=source,
