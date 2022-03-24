@@ -15,7 +15,8 @@ text(`look_backward`, `look_forward`) is scanned for `KEYWORDS`.
 
 In the current state it is not possible to ensure that collecting
 `steals` the text of an other text item. Duplicated parsing is already
-handled correctly."""
+handled correctly.
+"""
 
 import abc
 import itertools
