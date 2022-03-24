@@ -6,12 +6,3 @@
 # use or distribution is an offensive act against international law and may
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
-
-iamraw>=4.64.0<5.0.0
-utila>=2.69.0<3.0.0
-
-groupme>=0.26.0<1.0.0
-
-
-
-configo>=0.18.0<1.0.0

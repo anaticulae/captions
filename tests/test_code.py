@@ -7,11 +7,19 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-iamraw>=4.64.0<5.0.0
-utila>=2.69.0<3.0.0
+import power
+import serializeraw
 
-groupme>=0.26.0<1.0.0
+import tests
 
 
-
-configo>=0.18.0<1.0.0
+def test_listing_bachelor111p45(testdir, monkeypatch):
+    source = power.link(power.BACHELOR111_PDF)
+    cmd = f'-i {source} --pages=45 --code'
+    tests.run(cmd, monkeypatch=monkeypatch)
+    codes = testdir.tmpdir.join('caption__code_caption.yaml')
+    codes = serializeraw.load_captions(codes)
+    assert len(codes) == 1
+    expected = 'Listing 4.1: Auszug aus der Gruppen-Konfigurationsdatei der ETS'
+    caption = codes[0].content[0].raw
+    assert caption == expected
