@@ -35,6 +35,7 @@ RESOURCES = [
         tablero=True,
     ),
     power.MASTER072_PDF,
+    power.MASTER063_PDF,
     power.BACHELOR063_PDF,
     power.BACHELOR051_PDF,
     power.BACHELOR056_PDF,
