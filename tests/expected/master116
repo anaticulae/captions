@@ -16,8 +16,10 @@ Abb. 2.4.: Leistungsfluss Leistungsverzweigung mit Wandlerverlusten [Hof11, S.33
 Abb. 2.5.: Hybridlokomotive Railpower GG20B Green Goat aus [Wik07].
 Abb. 2.6.: Alstom H3 aus [Rö15]
 Abb. 2.7.: Hybride Lokomotive Toshiba HD300 aus [Wik13]
-Abb. 2.8.: Dynamischer Verlauf der Drehzahl Abb. 2.9.: Dynamischer Verlauf des Drehmonach [Sko11]. ments nach [Sko11].
+Abb. 2.8.: Dynamischer Verlauf der Drehzahl nach [Sko11].
+Abb. 2.9.: Dynamischer Verlauf des Drehmoments nach [Sko11].
 Abb. 3.1.: Verlauf der Fahrzeuggeschwindigkeit im Referenzzyklus.
+Abb. 3.10.: Geforderte Traktionsleistung, Anhängelast 1400 Tonnen.
 Abb. 3.11.: Zur Modernisierung vorgegebene Referenzlokomotive aus [Mor09].
 Abb. 3.12.: Getriebestruktur des Antriebsstrangs nach [Pfe14].
 Abb. 3.13.: Maximales Drehmoment am Getriebeausgang.
@@ -29,8 +31,9 @@ Abb. 3.3.: Strecke Behala 1800 - Logarithmische Häufigkeitsverteilung der Trakt
 Abb. 3.4.: Strecke Chemiepark - Logarithmische Häufigkeitsverteilung der Traktionsleistung.
 Abb. 3.5.: Strecke Referenzzyklus - Logarithmische Häufigkeitsverteilung der Traktionsleistung.
 Abb. 3.6.: Verfahren zum Ermitteln der Anforderungen aus einem gegebenen Streckenabschnitt. Der vorgegebene Streckenabschnitt wird geladen und analysiert. Die ermittelten Daten werden durch den Filter über eine Einhüllende geglättet. Als Ergebnis stehen Moment, Leistung und Winkelbeschleunigung in Abhängigkeit der Lokomotivgeschwindigkeit und Beladung.
-Abb. 3.7.: Gefordertes Traktionsmoment, An­ Abb. 3.8.: Gefordertes Traktionsmoment, Anhängelast 0 Tonnen hängelast 1400 Tonnen
-Abb. 3.9.: Geforderte Traktionsleistung, An­ Abb. 3.10.: Geforderte Traktionsleistung, Anhängelast 0 Tonnen. hängelast 1400 Tonnen.
+Abb. 3.7.: Gefordertes Traktionsmoment, Anhängelast 0 Tonnen
+Abb. 3.8.: Gefordertes Traktionsmoment, Anhängelast 1400 Tonnen
+Abb. 3.9.: Geforderte Traktionsleistung, Anhängelast 0 Tonnen.
 Abb. 4.1.: Nummerierung der Zahnräder. Abb. 4.2.: Nummerierung der Wellen.
 Abb. 4.3.: Innere und äußere Momente im Getriebemodell.
 Abb. 4.5.: Wirkungsgradkennfeld der elektrischen Maschinen in Abhängigkeit der Drehzahl und des Drehmoments. Daten aus [IAV15].
@@ -42,7 +45,8 @@ Abb. 5.10.: Konvergenzanalyse der relativ geleisteten Arbeit des Verbrennungsmot
 Abb. 5.11.: Konvergenzanalyse des Simulationsfehler in Abhängigkeit der Batterie- und Verbrennungsmotordrehzahlauflösung des Zustandsraums.
 Abb. 5.12.: Parameterstruktur der Betriebsstrategie. Die Leistung des Verbrennungsmotor 𝑃𝐼𝐶𝐸,𝑠𝑜𝑙𝑙 ist von der angeforderten Traktionsleistung 𝑃𝑇,𝑠𝑜𝑙𝑙 und dem aktuellen SOC abhängig.
 Abb. 5.13.: Vorgehen zum Erzeugen des Kennfeldes der Fahrstrategie.
-Abb. 5.14.: Erzeugtes Strategiekennfeld Bela­ Abb. 5.15.: Erzeugtes Strategiekennfeld Beladung 0 t dung 1800 t
+Abb. 5.14.: Erzeugtes Strategiekennfeld Beladung 0 t
+Abb. 5.15.: Erzeugtes Strategiekennfeld Beladung 1800 t
 Abb. 5.2.: Beispiel dynamische Programmierung. Die Knoten entsprechen den diskreten Systemzuständen. Die Kosten für einen Zustandsübergang sind auszugsweise an den Kanten des Graphen dargestellt. Die Zahl im Knoten entspricht den Kosten bis zum Ziel, die in der Rückwärtsrechnung ermittelt werden.
 Abb. 5.3.: Vorgehen zum Erzeugen des Betriebsstrategiekennfeldes für die Referenzstrecke.
 Abb. 5.4.: Ermittelung der Fahrzeuganforderungsspezifikation aus den gegebenen Streckenfahrprofilen.
@@ -55,7 +59,8 @@ Abb. 6.1.: Velodyn-Modell der konventionellen Lokomotive [IAV15]
 Abb. 6.10.: Häufigkeit der Fahrstufen des eCVT-Modells während des Referenzzyklus.
 Abb. 6.11.: Übersicht der Verteilung Traktionsleistungen in den Modellen.
 Abb. 6.12.: Skalierung der Betriebsstrategie und Gesamtverbrauch auf der Referenzstrecke.
-Abb. 6.13.: Durchschnittliche Antriebsleistung Abb. 6.14.: Durchschnittliche Geschwindigkeit bei Variation des Betriebsstrategiekennfeldes. bei Variation des Betriebsstrategiekennfeldes.
+Abb. 6.13.: Durchschnittliche Antriebsleistung bei Variation des Betriebsstrategiekennfeldes.
+Abb. 6.14.: Durchschnittliche Geschwindigkeit bei Variation des Betriebsstrategiekennfeldes.
 Abb. 6.15.: SOC-Verlauf in Abhängigkeit des skalierten Betriebsstrategiekennfeldes.
 Abb. 6.16.: Änderung der relativen elektrischen Verlustleistung des Generators
 Abb. 6.17.: Änderung der relativen elektrischen Verlustleistung der Fahrmotoren
@@ -69,7 +74,7 @@ Abb. 6.6.: Auswertung des Fahrerleistungswunsches durch Kennfeld der maximalen Z
 Abb. 6.7.: Bestimmung der Sollmomente durch Anwendung der Systemgleichungen.
 Abb. 6.8.: Begrenzung des maximalen Verbrennungsmotormoments durch Limitierung des Generators
 Abb. 6.9.: Analyse der Verteilung der Fahrstufen für den Referenzzyklus.
-Abb. A.1.: Strecke RST 0 Logarithmische Häu­ Abb. A.2.: Strecke RST 560 Logarithmische figkeitsverteilung der Traktionsleistung Häufigkeitsverteilung der Traktionsleistung
+Abb. A.1.: Strecke RST 0 Logarithmische Häufigkeitsverteilung der Traktionsleistung
 Abb. A.10.: RST 0 Geschwindigkeits- und Beladungsprofil
 Abb. A.11.: RST 560 Geschwindigkeits- und Beladungsprofil
 Abb. A.12.: Behala 1400 Beladung 0 t
@@ -79,7 +84,9 @@ Abb. A.15.: Behala 1800 Beladung 1800 t
 Abb. A.16.: RST 0 Beladung 0 t
 Abb. A.17.: RST 560 Beladung 560 t
 Abb. A.18.: Chemiepark Beladung 110 t
-Abb. A.3.: Geforderte Radsatzbeschleunigung, Abb. A.4.: Geforderte Radsatzbeschleunigung, Anhängelast 0 Tonnen Anhängelast 1400 Tonnen
+Abb. A.2.: Strecke RST 560 Logarithmische Häufigkeitsverteilung der Traktionsleistung
+Abb. A.3.: Geforderte Radsatzbeschleunigung, Anhängelast 0 Tonnen
+Abb. A.4.: Geforderte Radsatzbeschleunigung, Anhängelast 1400 Tonnen
 Abb. A.5.: Geschwindigkeits- und Beladungsprofil des Referenzzyklus.
 Abb. A.7.: Behala 1400 Geschwindigkeits- und Beladungsprofil
 Abb. A.8.: Behala 1800 Geschwindigkeits- und Beladungsprofil
