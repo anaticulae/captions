@@ -9,12 +9,17 @@
 """\
 >>> CAPTIONS.match('Abbildung 2.1.: Verknüpfung klassisches und AUTOSAR-Steuergerät nach [OK09, Seite 41]')
 <re.Match object; span=(0, 15), match='Abbildung 2.1.:'>
+
+Do not match `Abbildung die` as `Abbildung D`
+>>> not CAPTIONS.match('Abbildung die dreifach Wechselwirkung Prä-Post')
+True
 """
 
 import iamraw
 import serializeraw
 import utila
 
+import caption.feature
 import caption.processor
 
 
@@ -53,24 +58,15 @@ def work(
 
 # TODO: Introduce special mechanism to dump them as tables
 # Tab. Tabelle, Table to detect tables which are stored as image
-
-CAPTIONS = utila.compiles(r"""
-    ^
-    (
-        Abb\.|
-        Abbildung|
-        Fig\.|
-        Figure|
-        Foto|
-        Graph|
-        Tab\.|
-        Tabelle|
-        Table
-    )
-    [ ]{0,3}
-    (
-        (\d{1,2}|[A-Z])(\.\d{1,2}\.?)?
-    )
-    [ ]{0,3}
-    \:?
-""")
+NAMES_VALID = r"""
+    Abb\.|
+    Abbildung|
+    Fig\.|
+    Figure|
+    Foto|
+    Graph|
+    Tab\.|
+    Tabelle|
+    Table
+"""
+CAPTIONS = utila.compiles(caption.feature.BASE % NAMES_VALID)

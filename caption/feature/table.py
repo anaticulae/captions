@@ -17,6 +17,7 @@ import iamraw
 import serializeraw
 import utila
 
+import caption.feature
 import caption.processor
 
 
@@ -52,21 +53,13 @@ def work(
     return dumped
 
 
-CAPTIONS = utila.compiles(r"""
-    ^
-    (
-        Tab\.|
-        Tabelle|
-        Table|
-        Abb\.|                  # Mark wrong used label? See HOME50p32
-        Abbildung|
-        Fig\.|
-        Figure
-    )
-    [ ]{0,3}
-    (
-        (\d{1,2}|[A-Z])(\.\d{1,2}\.?)?
-    )
-    [ ]{0,3}
-    \:?
-""")
+NAMES_VALID = r"""
+    Tab\.|
+    Tabelle|
+    Table|
+    Abb\.|                  # Mark wrong used label? See HOME50p32
+    Abbildung|
+    Fig\.|
+    Figure
+"""
+CAPTIONS = utila.compiles(caption.feature.BASE % NAMES_VALID)

@@ -6,3 +6,23 @@
 # use or distribution is an offensive act against international law and may
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
+
+BASE = r"""
+    ^
+    (
+        %s
+        # Abb\.|
+        # Abbildung|
+        # ...
+    )
+    [ ]{0,3}
+    (
+        (
+            \d{1,2}\.?|
+            [A-Z]([ ]|\.)
+        )
+        (\d{1,2}\.?)?
+    )
+    [ ]{0,3}
+    \:?
+"""
