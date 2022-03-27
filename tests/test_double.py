@@ -25,3 +25,26 @@ def test_double_caption_master116p101(testdir, monkeypatch):
     figures = serializeraw.load_captions(figures, pages=101)
     figures = utila.flatten_content(figures)
     assert len(figures) == 4
+
+
+# yapf:disable
+EXPECTED = utila.splitlines("""\
+Strecke Behala 1400 - Logarithmische Häufigkeitsverteilung der Traktionsleistung.
+Strecke Chemiepark - Logarithmische Häufigkeitsverteilung der Traktionsleistung.
+Strecke Behala 1800 - Logarithmische Häufigkeitsverteilung der Traktionsleistung.
+Strecke Referenzzyklus - Logarithmische Häufigkeitsverteilung der Traktionsleistung.
+""", lowers=False)
+# yapf:enable
+
+
+@utilatest.requires(power.MASTER116_PDF)
+def test_double_caption_master116p34(testdir, monkeypatch):
+    source = power.link(power.MASTER116_PDF)
+    cmd = f'-i {source} --pages=34 --image --result'
+    tests.run(cmd, monkeypatch=monkeypatch)
+    figures = iamraw.path.caption_result(testdir.tmpdir)
+    figures = serializeraw.load_captions(figures, pages=34)
+    figures = utila.flatten_content(figures)
+    assert len(figures) == 4
+    current = set(item.text for item in figures)
+    assert current == EXPECTED

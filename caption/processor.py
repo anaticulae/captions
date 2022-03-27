@@ -98,7 +98,7 @@ class CaptionPageProcessor:
     def create_caption(self, selected, overlap: bool = False) -> iamraw.Caption:
         if self.verbose:
             selected, matched = selected
-        raw = '\n'.join([item[1].text for item in selected])
+        raw = '\n'.join([item[1].text.strip() for item in selected])
         raw = utila.normalize_text(raw)
         item = iamraw.Caption(
             line=selected[0][0],
@@ -155,7 +155,11 @@ def try_split(selected, overlap: bool = False) -> list:  # pylint:disable=W0613
     )
     # TODO: LINE INDEXING IS NOT CORRECT ANYMORE
     left, right = [(items[0][0], splitted[0])], [(items[0][0] + 1, splitted[1])]
-    for index, item in enumerate(items[1:], start=1):
+    items = longline_split(
+        items[1:],
+        middle=right[0][1].bounding[0],
+    )
+    for index, item in enumerate(items, start=1):
         # give the rest of the items to the left and to the right caption
         if index % 2:
             left.append(item)
@@ -169,6 +173,30 @@ def try_split(selected, overlap: bool = False) -> list:  # pylint:disable=W0613
         (left, matched),
         (right, searched),
     ]
+    return result
+
+
+def longline_split(items, middle: float):  # pylint:disable=W0613
+    result = []
+    # TODO: USE MIDDLE LATER
+    for index, text in items:
+        if len(text.text) < 60:
+            # do not split
+            result.append((index, text))
+            continue
+        # split
+        index = text.text.find('\xad')
+        # Try to split item by - separator: 'der Traktionsleis­- mische
+        # Häufigkeits'
+        if index:
+            splitted = texmex.splitby_count(
+                text,
+                counts=(index + 1, len(text.text)),
+            )
+            for ind, item in enumerate(splitted):
+                result.append((index + ind, item))
+            continue
+        result.append((index, text))
     return result
 
 
