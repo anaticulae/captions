@@ -27,12 +27,6 @@ RESOURCES = [
     power.todo(
         power.BACHELOR090_PDF,
         caption=True,
-        codero=True,
-        figureo=True,
-        groupme=True,
-        magic=True,
-        rawmaker_cleanup=True,
-        tablero=True,
     ),
     power.MASTER072_PDF,
     power.MASTER063_PDF,
