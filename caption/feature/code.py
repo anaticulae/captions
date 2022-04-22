@@ -73,12 +73,14 @@ def convert_listings(
             else:
                 lineend = line + 1
             raw = ' '.join(item.text.strip() for item in ptcn[line:lineend])
+            bounding = iamraw.BoundingBox.from_list(poc.caption_bounding[0])
             collected.append(
                 iamraw.Caption(
                     line,
                     lineend,
                     raw=raw,
                     typ=iamraw.CaptionType.CODE,
+                    bounding=bounding,
                 ))
         if collected:
             result.append(
