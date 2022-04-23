@@ -34,7 +34,7 @@ def work(
         # dump empty captions
         return serializeraw.dump_captions([])
     # prepare data
-    ptcns = serializeraw.create_pagetextcontentnavigators_fromfile(
+    ptcns = serializeraw.ptcn_fromfile(
         oneline_text,
         oneline_textposition,
         sizeandborderpath=sizeandborder,

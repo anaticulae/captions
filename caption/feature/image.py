@@ -31,7 +31,7 @@ def work(
     *images: list,
     pages: tuple = None,
 ) -> str:
-    ptcns = serializeraw.create_pagetextcontentnavigators_fromfile(
+    ptcns = serializeraw.ptcn_fromfile(
         text_oneline,
         textposition_oneline,
         sizeandborderpath=sizeandborder,
