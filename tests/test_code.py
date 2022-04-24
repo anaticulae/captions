@@ -9,10 +9,12 @@
 
 import power
 import serializeraw
+import utilatest
 
 import tests
 
 
+@utilatest.requires(power.BACHELOR111_PDF)
 def test_listing_bachelor111p45(testdir, monkeypatch):
     source = power.link(power.BACHELOR111_PDF)
     cmd = f'-i {source} --pages=45 --code'
