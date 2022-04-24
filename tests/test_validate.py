@@ -17,7 +17,7 @@ import utila
 import utilatest
 
 import caption
-import tests.utils
+import tests
 
 ARCHIVE = utila.join(caption.ROOT, 'tests/expected', exist=True)
 
