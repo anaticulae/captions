@@ -2,6 +2,13 @@
 
 Every noteable change is logged here.
 
+## v0.3.0
+
+### Feature
+
+* determine bounding for captions (9ce30084c483)
+* add bounding of code caption (a384f6f403cd)
+
 ## v0.2.1
 
 ## v0.2.0
