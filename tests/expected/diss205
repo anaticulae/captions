@@ -32,6 +32,10 @@ Abbildung 8.7: Constraint-Graph des Beispiels Trapez-Wand. Darin sind ausschlie�
 Abbildung 8.8: Visualisierung des Lösungsraums (rot) der Linie 𝑃 1 und 𝑃 2 (Unterkante vorne) des Beispiels Trapez-Wand in der prototypischen Implementierung
 Abbildung 8.9: Geometrische Anfragen mit Skizze (blau) mit dem Ergebnis (schwarz umrandet) für das Beispiel Trapez-Wand; der exakte Lösungsraum der Grundseite der Wand ist rot dargestellt.
 Abbildung A.1: Vollständiges Klassendiagramm des entwickelten Bauwerksmodells aus Kapitel 6
+Algorithmus 7.1: Basis-Algorithmus nach dem Prinzip des Branch-and-Prune
+Algorithmus 7.2: Prune-Operator für die Minimierung nach der Methode der
+Algorithmus 7.3: Prove-Operator für die Aktualisierung der bisher besten
+Algorithmus 7.4: Globale Hülle nach Cruz (angelehnt an Cruz, 2003, Abbildung
 Tabelle 2.1: Topologischen Objekte einer Boundary representation, entsprechend ihrer Dimension, mit deutscher und englischer Bezeichnung
 Tabelle 4.1: Konkrete Ausprägungen des Modellierens von Geometrie anhand der Manipulationsform und der vorhandenen Parametrik
 Tabelle 5.1: Vergleich der Ergebnisse der Division 1000/7777 mit Fließkommaarithmetik und der gerundeten Intervallarithmetik, bei der Verwendung von Fließkommazahlen einfacher (single) oder doppelter (double) Präzision. Unterschiede in den Dezimalstellen sind fett markiert.
