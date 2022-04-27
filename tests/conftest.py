@@ -54,7 +54,7 @@ def extract(resources):
         codero=True,
         figureo=True,
         groupme=True,
-        rawmaker_cleanup=True,
+        cleanup=True,
         tablero=True,
         worker=WORKER,
         pages=':',
