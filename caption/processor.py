@@ -73,10 +73,12 @@ class CaptionPageProcessor:
             if not selected:
                 utila.info(f'could not find caption for: {bounding}')
                 continue
+            reference = utila.pagebox_hash(page=page.page, box=bounding)
             for caption in try_split(selected, overlap=overlap):
                 caption = self.create_caption(
                     caption,
                     overlap=overlap,
+                    reference=reference,
                 )
                 result.append(caption)
         return result
@@ -95,7 +97,12 @@ class CaptionPageProcessor:
         ))
         return selected
 
-    def create_caption(self, selected, overlap: bool = False) -> iamraw.Caption:
+    def create_caption(
+        self,
+        selected,
+        overlap: bool = False,
+        reference: int = None,
+    ) -> iamraw.Caption:
         if self.verbose:
             selected, matched = selected
         bounding = utila.rectangle_max([item[1].bounding for item in selected])
@@ -108,6 +115,7 @@ class CaptionPageProcessor:
             overlap=overlap,
             raw=raw,
             typ=self.typ,
+            reference=reference,
         )
         if self.verbose:
             item.label = matched[1]

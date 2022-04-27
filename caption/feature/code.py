@@ -81,6 +81,7 @@ def convert_listings(
                     raw=raw,
                     typ=iamraw.CaptionType.CODE,
                     bounding=bounding,
+                    reference=poc.identifier,
                 ))
         if collected:
             result.append(
