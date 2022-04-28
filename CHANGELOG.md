@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.4.0
+
+### Feature
+
+* determine caption reference (858e1f1b33e3)
+
 ## v0.3.0
 
 ### Feature
