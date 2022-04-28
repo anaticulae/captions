@@ -24,10 +24,7 @@ RESOURCES = [
     power.BACHELOR111_PDF,
     power.MASTER099_PDF,
     power.MASTER098_PDF,
-    power.todo(
-        power.BACHELOR090_PDF,
-        caption=True,
-    ),
+    power.BACHELOR090_PDF,
     power.MASTER072_PDF,
     power.MASTER063_PDF,
     power.BACHELOR063_PDF,
