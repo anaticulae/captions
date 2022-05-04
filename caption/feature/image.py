@@ -34,8 +34,8 @@ def work(
     ptcns = serializeraw.ptcn_fromfile(
         text_oneline,
         textposition_oneline,
-        sizeandborderpath=sizeandborder,
-        headerfooterpath=footerheader,
+        sizeandborder=sizeandborder,
+        headerfooter=footerheader,
         pages=pages,
     )
     # skip hidden: do not determine caption for images which are part of a

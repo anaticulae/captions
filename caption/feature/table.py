@@ -37,8 +37,8 @@ def work(
     ptcns = serializeraw.ptcn_fromfile(
         oneline_text,
         oneline_textposition,
-        sizeandborderpath=sizeandborder,
-        headerfooterpath=footerheader,
+        sizeandborder=sizeandborder,
+        headerfooter=footerheader,
         pages=pages,
     )
     tables = serializeraw.load_tables(tables, pages=pages)

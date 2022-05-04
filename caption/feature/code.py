@@ -28,8 +28,8 @@ def work(
     ptcns = serializeraw.ptcn_fromfile(
         text_oneline,
         textposition_oneline,
-        sizeandborderpath=sizeandborder,
-        headerfooterpath=footerheader,
+        sizeandborder=sizeandborder,
+        headerfooter=footerheader,
         pages=pages,
     )
     if utila.exists(translation):
