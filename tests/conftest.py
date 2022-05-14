@@ -18,22 +18,22 @@ PACKAGE = caption.PROCESS
 power.setup(caption.ROOT)
 
 RESOURCES = [
-    power.DISS266_PDF,
-    power.DISS205_PDF,
-    power.MASTER116_PDF,
-    power.BACHELOR111_PDF,
-    power.MASTER099_PDF,
-    power.MASTER098_PDF,
-    power.BACHELOR090_PDF,
-    power.MASTER072_PDF,
-    power.MASTER063_PDF,
-    power.BACHELOR063_PDF,
+    (power.MASTER110_PDF, '0:60'),
     power.BACHELOR051_PDF,
     power.BACHELOR056_PDF,
-    power.HOME025_PDF,
+    power.BACHELOR063_PDF,
+    power.BACHELOR090_PDF,
+    power.BACHELOR111_PDF,
+    power.DISS205_PDF,
+    power.DISS266_PDF,
     power.DOCU007_PDF,
+    power.HOME025_PDF,
     power.MASTER031_PDF,
-    (power.MASTER110_PDF, '0:60'),
+    power.MASTER063_PDF,
+    power.MASTER072_PDF,
+    power.MASTER098_PDF,
+    power.MASTER099_PDF,
+    power.MASTER116_PDF,
 ]
 
 WORKER = 4
