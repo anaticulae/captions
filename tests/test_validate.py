@@ -35,6 +35,7 @@ ARCHIVE = utila.join(caption.ROOT, 'tests/expected', exist=True)
     pytest.param(power.MASTER031_PDF, 'master031', id='master031'),
     pytest.param(power.MASTER063_PDF, 'master063', id='master063'),
     pytest.param(power.MASTER072_PDF, 'master072', id='master072'),
+    pytest.param(power.MASTER091B_PDF, 'master091b', id='master091b'),
     pytest.param(power.MASTER098_PDF, 'master098', id='master098'),
     pytest.param(power.MASTER099_PDF, 'master099', id='master099'),
     pytest.param(power.MASTER110_PDF, 'master110', id='master110'),
