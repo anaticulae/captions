@@ -73,6 +73,9 @@ def convert_listings(
             else:
                 lineend = line + 1
             raw = ' '.join(item.text.strip() for item in ptcn[line:lineend])
+            if not raw.strip():
+                utila.error(f'invalid poc: {poc}')
+                continue
             bounding = iamraw.BoundingBox.from_list(poc.caption_bounding[0])
             collected.append(
                 iamraw.Caption(
