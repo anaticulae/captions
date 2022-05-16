@@ -2,6 +2,13 @@
 
 Every noteable change is logged here.
 
+## v0.4.1
+
+### Fix
+
+* skip empty poc caption (d4d5829d4804)
+* adjust input resource name (0d39d6e335a3)
+
 ## v0.4.0
 
 ### Feature
