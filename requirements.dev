@@ -17,6 +17,7 @@ power==2.7.0
 jam==0.4.0
 tablero>=0.9.3<1.0.0
 codero>=0.5.0<1.0.0
+figureo==0.17.3
 
 # generate magic test data
 words==1.17.0
