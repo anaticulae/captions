@@ -33,7 +33,7 @@ WORKPLAN = [
         inputs=CAPTION_DATA + [
             utila.ResultFile('codero', 'result_result', optional=True),
             utila.ResultFile(
-                producer='rawmaker_cleanup',
+                producer='cleanup',
                 name='oneline_translate_text',
                 optional=True,
             ),
