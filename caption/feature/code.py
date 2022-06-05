@@ -79,8 +79,8 @@ def convert_listings(
             bounding = iamraw.BoundingBox.from_list(poc.caption_bounding[0])
             collected.append(
                 iamraw.Caption(
-                    line,
-                    lineend,
+                    line=line,
+                    lineend=lineend,
                     raw=raw,
                     typ=iamraw.CaptionType.CODE,
                     bounding=bounding,
