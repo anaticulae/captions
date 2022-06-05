@@ -7,6 +7,7 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import elements
 import iamraw
 import serializeraw
 import texmex
@@ -77,10 +78,12 @@ def convert_listings(
                 utila.error(f'invalid poc: {poc}')
                 continue
             bounding = iamraw.BoundingBox.from_list(poc.caption_bounding[0])
+            parsed = elements.parse_caption(raw)
             collected.append(
                 iamraw.Caption(
                     line=line,
                     lineend=lineend,
+                    text=parsed[1] if parsed else raw,
                     raw=raw,
                     typ=iamraw.CaptionType.CODE,
                     bounding=bounding,
