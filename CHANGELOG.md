@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.4.2
+
+### Feature
+
+* add missing text (98abee3f2ca0)
+
 ## v0.4.1
 
 ### Fix
