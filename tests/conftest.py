@@ -9,6 +9,7 @@
 
 import genex
 import power
+import utilatest
 
 import caption
 
@@ -37,7 +38,7 @@ RESOURCES = [
     power.MASTER116_PDF,
 ]
 
-WORKER = 4
+WORKER = utilatest.worker_count(5, onci=len(RESOURCES))
 
 
 def pytest_sessionstart(session):  # pylint:disable=W0613
