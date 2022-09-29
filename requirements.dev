@@ -15,17 +15,17 @@ power==2.14.1
 
 # test data generator
 jam==0.5.1
-tablero>=0.10.0<1.0.0
+tablero>=0.10.1<1.0.0
 codero>=0.5.0<1.0.0
-figureo==0.17.3
-cleanup==0.6.0
+figureo==0.18.0
+cleanup==0.7.0
 
 # generate magic test data
 words==1.22.0
 detector==0.39.0
 
 # generate example data
-genex==0.35.1
+genex==0.35.2
 genref==1.3.6
 
 utilatest==0.20.1
