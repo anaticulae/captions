@@ -48,10 +48,12 @@ def pytest_sessionstart(session):  # pylint:disable=W0613
 def extract(resources):
     genex.extract(
         resources,
+        cleanup=True,
         codero=True,
         figureo=True,
+        footnote=True,
         groupme=True,
-        cleanup=True,
+        pagenumber=True,
         tablero=True,
         worker=WORKER,
         pages=':',
