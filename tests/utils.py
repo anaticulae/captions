@@ -10,6 +10,7 @@
 import iamraw.path
 import power
 import serializeraw
+import utilatest
 
 import tests
 
@@ -22,11 +23,11 @@ def extract_captions(
     resultpath=None,
     selected='',
 ):
+    utilatest.fixture_requires(source)
     resultpath = resultpath if resultpath else iamraw.path.image_caption
     source = power.link(source)
     cmd = f'-i {source} --pages={pages} {selected}'
     tests.run(cmd, monkeypatch=monkeypatch)
-
     path = resultpath(testdir.tmpdir)
     loaded = serializeraw.load_captions(path)
     return loaded

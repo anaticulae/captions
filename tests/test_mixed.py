@@ -11,10 +11,12 @@ import iamraw.path
 import power
 import serializeraw
 import utila
+import utilatest
 
 import tests
 
 
+@utilatest.requires(power.BACHELOR051_PDF)
 def test_mixed_bachelor51p30(testdir, monkeypatch):
     source = power.link(power.BACHELOR051_PDF)
     cmd = f'-i {source} --pages=30'
