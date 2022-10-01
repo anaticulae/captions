@@ -8,12 +8,14 @@
 # =============================================================================
 
 import power
+import pytest
 import serializeraw
 import utilatest
 
 import tests
 
 
+@pytest.mark.xfail(reason='software integration')
 @utilatest.requires(power.BACHELOR111_PDF)
 def test_listing_bachelor111p45(testdir, monkeypatch):
     source = power.link(power.BACHELOR111_PDF)

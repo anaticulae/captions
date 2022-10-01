@@ -49,6 +49,7 @@ def test_bachelor90p80(testdir, monkeypatch):
     assert len(tables) == 1, str(tables)
 
 
+@pytest.mark.xfail(reason='software integration')
 def test_master116p12(testdir, monkeypatch):
     source = power.MASTER116_PDF
     extracted = tests.utils.extract_captions(

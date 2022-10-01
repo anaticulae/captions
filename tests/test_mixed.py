@@ -9,6 +9,7 @@
 
 import iamraw.path
 import power
+import pytest
 import serializeraw
 import utila
 import utilatest
@@ -16,6 +17,7 @@ import utilatest
 import tests
 
 
+@pytest.mark.xfail(reason='software integration')
 @utilatest.requires(power.BACHELOR051_PDF)
 def test_mixed_bachelor51p30(testdir, monkeypatch):
     source = power.link(power.BACHELOR051_PDF)
