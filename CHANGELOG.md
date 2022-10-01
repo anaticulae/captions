@@ -2,6 +2,21 @@
 
 Every noteable change is logged here.
 
+## v0.4.3 (2022-10-01)
+
+### Chore
+
+* save resources if nightly fails (33cdc32ab7f7)
+* upgrade baw (a8b7bc0c69d4)
+* upgrade requirements.txt (0ae3030939e8)
+* extend test data generator (9f68a6c60ded)
+* add missing dev requirement (2c1927e69d68)
+* increase worker count on CI (ce8e7e121f53)
+* add separate generator step (4371729433eb)
+* use new syntax (b998f5fa34b8)
+* add Jenkinsfile (9fefba3818ba)
+* upgrade requirements.txt (2cbf40a995a1)
+
 ## v0.4.2
 
 ### Feature
