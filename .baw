@@ -1,6 +1,3 @@
 [project]
 short = caption
 name = detect it
-
-[release]
-fail_on_finding = True
