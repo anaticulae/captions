@@ -1,6 +1,7 @@
 Abbildung 2.10: Informationsübertragung über das Bussystem LON [MHH]
 Abbildung 2.11: Beispiel eines Info-Panels mit Visualisierung (Gira) [Gir]
 Abbildung 2.12: Beispiel nativer mobiler KNX-Anwendungen (m..Remote und ayControl) [ibs][eas]
+Abbildung 2.1: Beispiele aktueller Smartphone-Plattformen [HTC], [Nok], [Appe], [Mot]
 Abbildung 2.2: Android System Stack [Goo]
 Abbildung 2.3: Schichten des iPhoneOS [Appc]
 Abbildung 2.4: DatePicker unter OS X optimiert für Mauseingabe [Appb]
@@ -10,6 +11,7 @@ Abbildung 2.7: Kommunikation bei konventioneller Elektroinstallation [WFPb]
 Abbildung 2.8: Informationsübertragung über das Bussystem KNX [WFPa]
 Abbildung 2.9: Topologie des KNX-Systems [Sie]
 Abbildung 3.1: Darstellung der Anwendungsumgebung
+Abbildung 3.2: Anwendungsfälle des Szenario 1
 Abbildung 3.3: Anwendungsfälle des Szenario 2
 Abbildung 4.1: Architektur des Systems
 Abbildung 4.2: MVC-Architekturmuster nach Apple [Appd]
@@ -21,6 +23,7 @@ Abbildung 5.1: Verknüpfung von Präsentationsobjekten zwischen Steuerungsschich
 Abbildung 6.1: Im Prototypen umgesetzte Anwendungsfälle
 Abbildung 6.2: Demonstration: Start der Anwendung und HomeView
 Abbildung 6.3: Konfiguration eines Projektes (Gruppen- bzw. Gerätekonfiguration)
+Abbildung 6.4: Auswahl von Projekten (Home-Ansicht) bzw. KNX-Gruppen (Gruppen-Ansicht)
 Abbildung 6.5: Benutzerschnittstellen zur Steuerung und Überwachung von KNX-Geräten (Schalten bzw. Dimmen)
 Abbildung A.10: Entwurf der Konfigurationsansicht der iPhone-Anwendung
 Abbildung A.11: KNX-Gebäudeautomationsinstallation
@@ -31,5 +34,9 @@ Abbildung A.4: Prozesskette beim eines Telegramms
 Abbildung A.5: Prozesskette beim Ausliefern von Nachrichten über die Server-Anwendung
 Abbildung A.6: Paketdiagramm uniKNX - Komponentenübersicht
 Abbildung A.7: Entwurf der Start-Ansicht der iPhone-Anwendung
-Empfangen von UDP-Paketen abgenommen. Durch die Unterstützung des
+Abbildung A.8: Entwurf der Gruppenlistenansicht der iPhone-Anwendung
+Abbildung A.9: Entwurf der Gruppendetailansicht der iPhone-Anwendung
+ellen Container-Dateien, den sogenannten NIB-Files4, verknüpft werden. Die-
+rationsdateien erzeugt werden und dem Anwender geeignete Präsentations-
 Tabelle 2.1: Varianten des IEEE-802.11 Standards [Fre07, S. 562f]
+Zudem müssen Write- bzw. Response-Telegramme aus dem KNX-System

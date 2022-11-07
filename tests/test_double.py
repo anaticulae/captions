@@ -9,7 +9,6 @@
 
 import iamraw.path
 import power
-import pytest
 import serializeraw
 import utila
 import utilatest
@@ -38,7 +37,6 @@ Strecke Referenzzyklus - Logarithmische Häufigkeitsverteilung der Traktionsleis
 # yapf:enable
 
 
-@pytest.mark.xfail(reason='software integration')
 @utilatest.requires(power.MASTER116_PDF)
 def test_double_caption_master116p34(testdir, monkeypatch):
     source = power.link(power.MASTER116_PDF)

@@ -1,3 +1,4 @@
+6.15)
 Abbildung 2.1: Taxonomie der Constraint-Satisfaction-Probleme in dieser Arbeit
 Abbildung 3.1: Klassifikation von Komponenten eines Bauwerks in einer Hierarchie (in eigene Übersetzung entnommen aus ISO 12006-2, Abbildung 2, links)
 Abbildung 3.2: Strukturierung von Komponenten eines Bauwerks als Kompositions-Hierarchie (angelehnt an ISO 12006-2, Abbildung 2, rechts)
@@ -24,6 +25,7 @@ Abbildung 8.11: Constraint-Graph des Beispiels Valides Polygon; die horizontalen
 Abbildung 8.12: 3D-Visualisierung eines gültigen Zustands des Beispiels Raum-begrenztdurch-Wände aus der prototypischen Implementierung mit hinzugefügten Bezeichnungen. Der Raum ist als Fläche blau dargestellt.
 Abbildung 8.13: Constraint-Graph des Beispiels Raum-begrenzt-durch-Wände. Darin sind ausschließlich Modellobjekte (Kreis) und die Constraints (Raute) zwischen diesen dargestellt. Die Geometrie-Constraints sind Gerichtete Koinzidenz von Linien (G-LP-XY) und Parallele Geraden durch Linien (PG-L-XY)
 Abbildung 8.1: Parametrisierung der Rechteck-Wand (semi-transparent). Der Ursprung und die Achsrichtung 𝑋 und 𝑌 sind beispielhaft, da lediglich die aufgespannte Ebene definiert sein muss.
+Abbildung 8.2: Parameter und Constraints der Unterseite der Rechteck-Wand in der XY-Ebene (Draufsicht).
 Abbildung 8.3: Constraint-Graph einer Rechteck-Wand. Darin sind ausschließlich Punkte (Kreis), Parameter (Rechteck) und die Constraints (Raute) zwischen diesen enthalten. Die Geometrie-Constraints sind Koinzidenz von Punkten in Z (KP-Z), vorzeichenbehafteter Abstand von Punkten in Z-Richtung (VA-P-Z) und rechter Winkel mit vorzeichenbehaftetem Abstand (RW-VA).
 Abbildung 8.4: 3D-Visualisierung eines gültigen Zustands des Beispiels Rechteck-Wand aus der prototypischen Implementierung
 Abbildung 8.6: Parameter und Constraints der Unterseite der Trapez-Wand in der XY-Ebene (Draufsicht).
@@ -31,6 +33,9 @@ Abbildung 8.7: Constraint-Graph des Beispiels Trapez-Wand. Darin sind ausschlie�
 Abbildung 8.8: Visualisierung des Lösungsraums (rot) der Linie 𝑃 1 und 𝑃 2 (Unterkante vorne) des Beispiels Trapez-Wand in der prototypischen Implementierung
 Abbildung 8.9: Geometrische Anfragen mit Skizze (blau) mit dem Ergebnis (schwarz umrandet) für das Beispiel Trapez-Wand; der exakte Lösungsraum der Grundseite der Wand ist rot dargestellt.
 Abbildung A.1: Vollständiges Klassendiagramm des entwickelten Bauwerksmodells aus Kapitel 6
+Als Bisektions-Strategie wurde die Heuristik nach Kubica (2015) gewählt, welche die
+Lösung bei der Minimierung nach der Methode der oberen Begrenzung
+oberen Begrenzung
 Tabelle 2.1: Topologischen Objekte einer Boundary representation, entsprechend ihrer Dimension, mit deutscher und englischer Bezeichnung
 Tabelle 4.1: Konkrete Ausprägungen des Modellierens von Geometrie anhand der Manipulationsform und der vorhandenen Parametrik
 Tabelle 5.1: Vergleich der Ergebnisse der Division 1000/7777 mit Fließkommaarithmetik und der gerundeten Intervallarithmetik, bei der Verwendung von Fließkommazahlen einfacher (single) oder doppelter (double) Präzision. Unterschiede in den Dezimalstellen sind fett markiert.
