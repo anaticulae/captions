@@ -2,6 +2,20 @@
 
 Every noteable change is logged here.
 
+## v0.4.4 (2022-11-07)
+
+### Chore
+
+* add opencv to process tablero correctly (a8f301faeb02)
+* upgrade baw to use resources feature (b572e4eea66d)
+* convert nightly to all (68f9d4b6c87f)
+* add headnote step (fafd3a75bbd0)
+* remove default config (52ac739720b8)
+* upgrade requirements.txt (db31786b18fb)
+* upgrade pipe library (d7490e7a4260)
+* upgrade environment (6b891ab7e206)
+* do not run in privileged mode (ede13ba21e30)
+
 ## v0.4.3 (2022-10-01)
 
 ### Chore
