@@ -52,6 +52,7 @@ def extract(resources):
         codero=True,
         figureo=True,
         footnote=True,
+        headnote=True,
         groupme=True,
         pagenumber=True,
         tablero=True,
