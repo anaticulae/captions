@@ -49,6 +49,5 @@ Tabelle B.4: Beispiel Trapez-Wand: Ergebnisse der Optimierungen für ausgewählt
 Tabelle B.5: Beispiel Valides Polygon: Berechnung der globalen Hülle für die Ausgangslage
 Tabelle B.6: Beispiel Valides Polygon: Ergebnisse der globalen Hülle bei der Lockerung der schwarzen Constraint 𝐶2 (auf die 3. Dezimalstelle gerundet). Unterschiede der Algorithmen sind grau eingefärbt.
 Tabelle B.7: Beispiel Valides Polygon: Ergebnisse der globalen Hülle bei der Lockerung der schwarzen Constraints 𝐶2 und 𝐶5 (auf die 3. Dezimalstelle gerundet). Unterschiede der Algorithmen sind grau eingefärbt.
-Tabelle B.8: Beispiel Valides Polygon: Ergebnisse der Optimierungen bei der Lockerung der schwarzen Constraints 𝐶2 und 𝐶5 (auf die 3. Dezimalstelle gerundet)
-Tabelle B.9: Beispiel Raum-begrenzt-durch-Wände: Ergebnisse der globalen Hülle für ausgewählte Parameter (auf die 3. Dezimalstelle gerundet). Unterschiede der Algorithmen sind grau eingefärbt.
+Tabelle B.8: Beispiel Valides Polygon: Ergebnisse der Optimierungen bei der Lockerung der schwarzen Constraints 𝐶2 und 𝐶5 (auf die 3. Dezimalstelle gerundet) Parameter 𝐶2 für 11 Skizze (H2.Y=13, H9=3)
 Tabelle B.9: Beispiel Raum-begrenzt-durch-Wände: Ergebnisse der globalen Hülle für ausgewählte Parameter (auf die 3. Dezimalstelle gerundet). Unterschiede der Algorithmen sind grau eingefärbt.
