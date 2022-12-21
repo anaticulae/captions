@@ -2,6 +2,14 @@
 
 Every noteable change is logged here.
 
+## v0.4.5 (2022-12-21)
+
+### Chore
+
+* use quick install (58e52ff86197)
+* upgrade requirements.txt (8349c244d332)
+* upgrade pipeline (7ab51b0718d1)
+
 ## v0.4.4 (2022-11-07)
 
 ### Chore
