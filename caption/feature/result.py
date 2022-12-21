@@ -48,7 +48,7 @@ def merge(*items) -> iamraw.PageContentCaptions:
     # remove duplications if table and image/figure detects the same caption
     for page, values in collected.items():
         before = values
-        collected[page] = make_unique(values)
+        collected[page] = unique(values)
         if collected[page] != before:
             before: str = utila.NEWLINE.join(str(item) for item in before)
             utila.error(f'duplicated caption:\n{before}')
@@ -64,5 +64,5 @@ def merge(*items) -> iamraw.PageContentCaptions:
     return result
 
 
-def make_unique(items):
-    return utila.make_unique(items)
+def unique(items):
+    return utila.unique(items)

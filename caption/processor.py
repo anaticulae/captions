@@ -44,9 +44,9 @@ class CaptionPageProcessor:
 
     def process_page(
         self,
-        page: texmex.PageTextContentNavigator,
+        page: texmex.PTCN,
         boundings,
-        page_next: texmex.PageTextContentNavigator = None,
+        page_next: texmex.PTCN = None,
     ) -> iamraw.Captions:
         """Detect caption after and before boundings."""
         if not boundings:
@@ -105,7 +105,7 @@ class CaptionPageProcessor:
     ) -> iamraw.Caption:
         if self.verbose:
             selected, matched = selected
-        bounding = utila.rectangle_max([item[1].bounding for item in selected])
+        bounding = utila.rect_max([item[1].bounding for item in selected])
         raw = '\n'.join([item[1].text.strip() for item in selected])
         raw = utila.normalize_text(raw)
         item = iamraw.Caption(
@@ -340,7 +340,7 @@ def run(processor, ptcns, items):
         boundings = utila.sort_leftright_topdown(boundings)
         # determine captions
         processed = processor.process_page(page, boundings, page_next=pageafter)
-        processed = utila.make_unique(processed)
+        processed = utila.unique(processed)
         for item in processed:
             item.pdfpage = page.page
         captions = iamraw.PageContentCaption(

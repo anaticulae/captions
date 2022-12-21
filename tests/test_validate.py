@@ -42,24 +42,24 @@ ARCHIVE = utila.join(caption.ROOT, 'tests/expected', exist=True)
     pytest.param(power.MASTER116_PDF, 'master116', id='master116'),
 ])
 @utilatest.longrun
-def test_validate(source, expected, testdir, monkeypatch):
+def test_validate(source, expected, td, mp):
     utilatest.fixture_requires(source)
     Evaluate(
         source=source,
         pages=':',
         expected=expected,
-        workdir=testdir.tmpdir,
-        monkeypatch=monkeypatch,
+        workdir=td.tmpdir,
+        mp=mp,
     ).evaluate()
 
 
 class Evaluate(utilatest.BaseLiner):
 
-    def __init__(self, source, pages, expected, workdir, monkeypatch):
+    def __init__(self, source, pages, expected, workdir, mp):
         super().__init__(
             program=functools.partial(
                 tests.run,
-                monkeypatch=monkeypatch,
+                mp=mp,
             ),
             step=None,
             pages=pages,

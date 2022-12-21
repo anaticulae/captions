@@ -17,13 +17,13 @@ import tests
 
 
 @utilatest.requires(power.BACHELOR051_PDF)
-def test_mixed_bachelor51p30(testdir, monkeypatch):
+def test_mixed_bachelor51p30(td, mp):
     source = power.link(power.BACHELOR051_PDF)
     cmd = f'-i {source} --pages=30'
-    tests.run(cmd, monkeypatch=monkeypatch)
+    tests.run(cmd, mp=mp)
 
-    table = iamraw.path.table_caption(testdir.tmpdir)
-    figure = iamraw.path.image_caption(testdir.tmpdir)
+    table = iamraw.path.table_caption(td.tmpdir)
+    figure = iamraw.path.image_caption(td.tmpdir)
 
     table = serializeraw.load_captions(table)
     figure = serializeraw.load_captions(figure)

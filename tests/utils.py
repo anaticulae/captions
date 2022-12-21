@@ -18,8 +18,8 @@ import tests
 def extract_captions(
     source,
     pages: str,
-    testdir,
-    monkeypatch,
+    td,
+    mp,
     resultpath=None,
     selected='',
 ):
@@ -27,7 +27,7 @@ def extract_captions(
     resultpath = resultpath if resultpath else iamraw.path.image_caption
     source = power.link(source)
     cmd = f'-i {source} --pages={pages} {selected}'
-    tests.run(cmd, monkeypatch=monkeypatch)
-    path = resultpath(testdir.tmpdir)
+    tests.run(cmd, mp=mp)
+    path = resultpath(td.tmpdir)
     loaded = serializeraw.load_captions(path)
     return loaded

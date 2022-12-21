@@ -17,11 +17,11 @@ import tests
 
 @pytest.mark.xfail(reason='software integration')
 @utilatest.requires(power.BACHELOR111_PDF)
-def test_listing_bachelor111p45(testdir, monkeypatch):
+def test_listing_bachelor111p45(td, mp):
     source = power.link(power.BACHELOR111_PDF)
     cmd = f'-i {source} --pages=45 --code'
-    tests.run(cmd, monkeypatch=monkeypatch)
-    codes = testdir.tmpdir.join('caption__code_caption.yaml')
+    tests.run(cmd, mp=mp)
+    codes = td.tmpdir.join('caption__code_caption.yaml')
     codes = serializeraw.load_captions(codes)
     assert len(codes) == 1
     expected = 'Listing 4.1: Auszug aus der Gruppen-Konfigurationsdatei der ETS'

@@ -16,46 +16,46 @@ import tests
 import tests.utils
 
 
-def test_cli_help(monkeypatch):
-    tests.run('--help', monkeypatch=monkeypatch)
+def test_cli_help(mp):
+    tests.run('--help', mp=mp)
 
 
 @pytest.mark.parametrize('page, expected', [
     (18, 1),
     (21, 2),
 ])
-def test_bachelor90px(page, expected, testdir, monkeypatch):
+def test_bachelor90px(page, expected, td, mp):
     source = power.BACHELOR090_PDF
     extracted = tests.utils.extract_captions(
         source,
         page,
-        testdir,
-        monkeypatch,
+        td,
+        mp,
     )
     content = utila.select_content(extracted, page)
     assert len(content) == expected
 
 
-def test_bachelor90p80(testdir, monkeypatch):
+def test_bachelor90p80(td, mp):
     source = power.BACHELOR090_PDF
     extracted = tests.utils.extract_captions(
         source,
         80,
-        testdir,
-        monkeypatch,
+        td,
+        mp,
         iamraw.path.table_caption,
     )
     tables = extracted[0].content
     assert len(tables) == 1, str(tables)
 
 
-def test_master116p12(testdir, monkeypatch):
+def test_master116p12(td, mp):
     source = power.MASTER116_PDF
     extracted = tests.utils.extract_captions(
         source,
         12,
-        testdir,
-        monkeypatch,
+        td,
+        mp,
         iamraw.path.caption_image,
     )
     figures = extracted[0].content

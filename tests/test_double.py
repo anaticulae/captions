@@ -17,11 +17,11 @@ import tests
 
 
 @utilatest.requires(power.MASTER116_PDF)
-def test_double_caption_master116p101(testdir, monkeypatch):
+def test_double_caption_master116p101(td, mp):
     source = power.link(power.MASTER116_PDF)
     cmd = f'-i {source} --pages=101 --image --result'
-    tests.run(cmd, monkeypatch=monkeypatch)
-    figures = iamraw.path.caption_result(testdir.tmpdir)
+    tests.run(cmd, mp=mp)
+    figures = iamraw.path.caption_result(td.tmpdir)
     figures = serializeraw.load_captions(figures, pages=101)
     figures = utila.flatten_content(figures)
     assert len(figures) == 4
@@ -38,11 +38,11 @@ Strecke Referenzzyklus - Logarithmische Häufigkeitsverteilung der Traktionsleis
 
 
 @utilatest.requires(power.MASTER116_PDF)
-def test_double_caption_master116p34(testdir, monkeypatch):
+def test_double_caption_master116p34(td, mp):
     source = power.link(power.MASTER116_PDF)
     cmd = f'-i {source} --pages=34 --image --result'
-    tests.run(cmd, monkeypatch=monkeypatch)
-    figures = iamraw.path.caption_result(testdir.tmpdir)
+    tests.run(cmd, mp=mp)
+    figures = iamraw.path.caption_result(td.tmpdir)
     figures = serializeraw.load_captions(figures, pages=34)
     figures = utila.flatten_content(figures)
     assert len(figures) == 4
