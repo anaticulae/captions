@@ -7,23 +7,8 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import functools
-
-import utila
 import utilatest
 
 import caption
-import caption.cli
 
-run = functools.partial(  #pylint: disable=invalid-name
-    utilatest.run_command,
-    main=caption.cli.main,
-    process=caption.PROCESS,
-    expect=True,
-)
-fail = functools.partial(  #pylint: disable=invalid-name
-    utilatest.run_command,
-    main=caption.cli.main,
-    process=caption.PROCESS,
-    expect=False,
-)
+run, fail = utilatest.create_cli_runner(caption)
