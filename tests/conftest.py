@@ -51,13 +51,13 @@ def extract(resources):
     gennex.extract(
         resources,
         cleanup=True,
-        codero=True,
-        figureo=True,
+        # codero=True,
+        # figureo=True,
         footnote=True,
         headnote=True,
         groupme=True,
         pagenumber=True,
-        tablero=True,
+        # tablero=True,
         worker=WORKER,
         pages=':',
     )
