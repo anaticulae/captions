@@ -7,48 +7,48 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import genex
-import power
-import utilatest
-from utilatest import mp  # pylint:disable=W0611
-from utilatest import td  # pylint:disable=W0611
+import gennex
+import hoverpower
+import utilotest
+from utilotest import mp  # pylint:disable=W0611
+from utilotest import td  # pylint:disable=W0611
 
 import caption
 
 pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
 
 PACKAGE = caption.PROCESS
-power.setup(caption.ROOT)
+hoverpower.setup(caption.ROOT)
 
 RESOURCES = [
-    (power.MASTER110_PDF, '0:60'),
-    power.BACHELOR051_PDF,
-    power.BACHELOR056_PDF,
-    power.BACHELOR063_PDF,
-    power.BACHELOR090_PDF,
-    power.BACHELOR111_PDF,
-    power.DISS205_PDF,
-    power.DISS266_PDF,
-    power.DOCU007_PDF,
-    power.HOME025_PDF,
-    power.MASTER031_PDF,
-    power.MASTER063_PDF,
-    power.MASTER072_PDF,
-    power.MASTER091B_PDF,
-    power.MASTER098_PDF,
-    power.MASTER099_PDF,
-    power.MASTER116_PDF,
+    (hoverpower.MASTER110_PDF, '0:60'),
+    hoverpower.BACHELOR051_PDF,
+    hoverpower.BACHELOR056_PDF,
+    hoverpower.BACHELOR063_PDF,
+    hoverpower.BACHELOR090_PDF,
+    hoverpower.BACHELOR111_PDF,
+    hoverpower.DISS205_PDF,
+    hoverpower.DISS266_PDF,
+    hoverpower.DOCU007_PDF,
+    hoverpower.HOME025_PDF,
+    hoverpower.MASTER031_PDF,
+    hoverpower.MASTER063_PDF,
+    hoverpower.MASTER072_PDF,
+    hoverpower.MASTER091B_PDF,
+    hoverpower.MASTER098_PDF,
+    hoverpower.MASTER099_PDF,
+    hoverpower.MASTER116_PDF,
 ]
 
-WORKER = utilatest.worker_count(5, onci=len(RESOURCES))
+WORKER = utilotest.worker_count(5, onci=len(RESOURCES))
 
 
 def pytest_sessionstart(session):  # pylint:disable=W0613
-    power.run()
+    hoverpower.run()
 
 
 def extract(resources):
-    genex.extract(
+    gennex.extract(
         resources,
         cleanup=True,
         codero=True,

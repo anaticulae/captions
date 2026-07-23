@@ -7,10 +7,10 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import hoverpower
 import iamraw.path
-import power
 import serializeraw
-import utilatest
+import utilotest
 
 import tests
 
@@ -23,9 +23,9 @@ def extract_captions(
     resultpath=None,
     selected='',
 ):
-    utilatest.fixture_requires(source)
+    utilotest.fixture_requires(source)
     resultpath = resultpath if resultpath else iamraw.path.image_caption
-    source = power.link(source)
+    source = hoverpower.link(source)
     cmd = f'-i {source} --pages={pages} {selected}'
     tests.run(cmd, mp=mp)
     path = resultpath(td.tmpdir)

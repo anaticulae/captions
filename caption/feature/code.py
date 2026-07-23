@@ -7,11 +7,11 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import elements
+import elementae
 import iamraw
 import serializeraw
 import texmex
-import utila
+import utilo
 
 
 def work(
@@ -23,8 +23,8 @@ def work(
     translation: str = None,
     pages: tuple = None,
 ) -> str:
-    if not utila.exists(codero):
-        utila.error(f'codero does not exists, skip --code: {codero}')
+    if not utilo.exists(codero):
+        utilo.error(f'codero does not exists, skip --code: {codero}')
         return serializeraw.dump_captions([])
     ptcns = serializeraw.ptcn_fromfile(
         text_oneline,
@@ -33,7 +33,7 @@ def work(
         headerfooter=footerheader,
         pages=pages,
     )
-    if utila.exists(translation):
+    if utilo.exists(translation):
         translation = serializeraw.load_translations(translation, pages=pages)
     else:
         translation = None
@@ -53,12 +53,12 @@ def convert_listings(
     translation = texmex.TranslationLookup(translations=translation)
     result = []
     for page in codero:
-        ptcn = utila.select_page(ptcns, page.page)
+        ptcn = utilo.select_page(ptcns, page.page)
         top = ptcn.offset[0]
         if top is None:
             # TODO: MAY A ROTATED PAGE?
             # NAVIGATOR DOES NOT MATCH TO CODE EXTRACTION
-            utila.error(f'empty navigator on page: {page.page}')
+            utilo.error(f'empty navigator on page: {page.page}')
             top = 0
         collected = []
         for poc in page.content:
@@ -75,10 +75,10 @@ def convert_listings(
                 lineend = line + 1
             raw = ' '.join(item.text.strip() for item in ptcn[line:lineend])
             if not raw.strip():
-                utila.error(f'invalid poc: {poc}')
+                utilo.error(f'invalid poc: {poc}')
                 continue
             bounding = iamraw.BoundingBox.from_list(poc.caption_bounding[0])
-            parsed = elements.parse_caption(raw)
+            parsed = elementae.parse_caption(raw)
             collected.append(
                 iamraw.Caption(
                     line=line,

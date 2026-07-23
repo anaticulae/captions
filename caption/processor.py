@@ -21,10 +21,10 @@ handled correctly.
 import abc
 import itertools
 
-import configo
+import configos
 import iamraw
 import texmex
-import utila
+import utilo
 
 
 class CaptionPageProcessor:
@@ -71,9 +71,9 @@ class CaptionPageProcessor:
                 if selected:
                     overlap = True
             if not selected:
-                utila.info(f'could not find caption for: {bounding}')
+                utilo.info(f'could not find caption for: {bounding}')
                 continue
-            reference = utila.pagebox_hash(page=page.page, box=bounding)
+            reference = utilo.pagebox_hash(page=page.page, box=bounding)
             for caption in try_split(selected, overlap=overlap):
                 caption = self.create_caption(
                     caption,
@@ -105,9 +105,9 @@ class CaptionPageProcessor:
     ) -> iamraw.Caption:
         if self.verbose:
             selected, matched = selected
-        bounding = utila.rect_max([item[1].bounding for item in selected])
+        bounding = utilo.rect_max([item[1].bounding for item in selected])
         raw = '\n'.join([item[1].text.strip() for item in selected])
-        raw = utila.normalize_text(raw)
+        raw = utilo.normalize_text(raw)
         item = iamraw.Caption(
             bounding=iamraw.BoundingBox.from_list(bounding),
             line=selected[0][0],
@@ -154,7 +154,7 @@ def try_split(selected, overlap: bool = False) -> list:  # pylint:disable=W0613
     halfline = int(len(firstline.text) / 2.2)
     right = firstline.text[halfline:]
     # remove expected line start from pattern to match inside text
-    pattern = utila.compiles(matched.re.pattern.lstrip(' ^\n'))
+    pattern = utilo.compiles(matched.re.pattern.lstrip(' ^\n'))
     searched = pattern.search(right)
     if not searched:
         return [selected]
@@ -212,9 +212,9 @@ def longline_split(items, middle: float):  # pylint:disable=W0613
 
 # Bounding is on the bottom of the page. We do not check the next page for
 # objects at the top of the page.
-CAPTION_NEXT_PAGE = configo.HV_PERCENT_PLUS(default=80)
+CAPTION_NEXT_PAGE = configos.HV_PERCENT_PLUS(default=80)
 # skip header content
-CAPTION_NEXT_PAGE_CONTENT_START = configo.HV_INT_PLUS(default=50)
+CAPTION_NEXT_PAGE_CONTENT_START = configos.HV_INT_PLUS(default=50)
 
 
 def before(navigator, current, minus):
@@ -246,11 +246,11 @@ def diffs(items):
     return result
 
 
-CAPTION_LOOK_BACKWARD_MAX = configo.HV_FLOAT_PLUS(default=120)
+CAPTION_LOOK_BACKWARD_MAX = configos.HV_FLOAT_PLUS(default=120)
 
-CAPTION_LOOK_FORWARD_MAX = configo.HV_FLOAT_PLUS(default=150)
+CAPTION_LOOK_FORWARD_MAX = configos.HV_FLOAT_PLUS(default=150)
 
-CAPTION_LINE_DIFF_MAX = configo.HV_FLOAT_PLUS(default=30.0)
+CAPTION_LINE_DIFF_MAX = configos.HV_FLOAT_PLUS(default=30.0)
 
 
 class CaptionPageWordProcessor(CaptionPageProcessor):
@@ -267,7 +267,7 @@ class CaptionPageWordProcessor(CaptionPageProcessor):
             typ=typ,
             verbose=verbose,
         )
-        self.words = words if utila.iterable(words) else (words,)
+        self.words = words if utilo.iterable(words) else (words,)
 
     def validate_after(self, items) -> list:
         end = len(items)
@@ -332,15 +332,15 @@ def inside(lines: list) -> list:
 def run(processor, ptcns, items):
     result = []
     for page, pageafter in itertools.zip_longest(ptcns, ptcns[1:]):
-        pagefigure = utila.select_page(items, page.page)
+        pagefigure = utilo.select_page(items, page.page)
         if not pagefigure:
             continue
         # determine and sort boundings of captionized figure/table/...
         boundings = [item.bounding for item in pagefigure.content]
-        boundings = utila.sort_leftright_topdown(boundings)
+        boundings = utilo.sort_leftright_topdown(boundings)
         # determine captions
         processed = processor.process_page(page, boundings, page_next=pageafter)
-        processed = utila.unique(processed)
+        processed = utilo.unique(processed)
         for item in processed:
             item.pdfpage = page.page
         captions = iamraw.PageContentCaption(

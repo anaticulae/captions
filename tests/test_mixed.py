@@ -7,18 +7,18 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import hoverpower
 import iamraw.path
-import power
 import serializeraw
-import utila
-import utilatest
+import utilo
+import utilotest
 
 import tests
 
 
-@utilatest.requires(power.BACHELOR051_PDF)
+@utilotest.requires(hoverpower.BACHELOR051_PDF)
 def test_mixed_bachelor51p30(td, mp):
-    source = power.link(power.BACHELOR051_PDF)
+    source = hoverpower.link(hoverpower.BACHELOR051_PDF)
     cmd = f'-i {source} --pages=30'
     tests.run(cmd, mp=mp)
 
@@ -28,7 +28,7 @@ def test_mixed_bachelor51p30(td, mp):
     table = serializeraw.load_captions(table)
     figure = serializeraw.load_captions(figure)
 
-    figures = utila.select_content(figure, page=30)
+    figures = utilo.select_content(figure, page=30)
     assert len(figures) == 1, str(figures)
-    tables = utila.select_content(table, page=30)
+    tables = utilo.select_content(table, page=30)
     assert len(tables) == 1, str(tables)

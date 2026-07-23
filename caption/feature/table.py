@@ -15,7 +15,7 @@ import os
 
 import iamraw
 import serializeraw
-import utila
+import utilo
 
 import caption.feature
 import caption.processor
@@ -30,7 +30,7 @@ def work(
     pages: tuple = None,
 ) -> str:
     if not os.path.exists(tables):
-        utila.error(f'could not load tables: {tables}, skip caption --table')
+        utilo.error(f'could not load tables: {tables}, skip caption --table')
         # dump empty captions
         return serializeraw.dump_captions([])
     # prepare data
@@ -62,4 +62,4 @@ NAMES_VALID = r"""
     Fig\.|
     Figure
 """
-CAPTIONS = utila.compiles(caption.feature.BASE % NAMES_VALID)
+CAPTIONS = utilo.compiles(caption.feature.BASE % NAMES_VALID)

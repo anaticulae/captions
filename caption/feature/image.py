@@ -17,7 +17,7 @@ True
 
 import iamraw
 import serializeraw
-import utila
+import utilo
 
 import caption.feature
 import caption.processor
@@ -69,4 +69,4 @@ NAMES_VALID = r"""
     Tabelle|
     Table
 """
-CAPTIONS = utila.compiles(caption.feature.BASE % NAMES_VALID)
+CAPTIONS = utilo.compiles(caption.feature.BASE % NAMES_VALID)

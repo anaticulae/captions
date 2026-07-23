@@ -12,7 +12,7 @@ import os
 
 import iamraw
 import serializeraw
-import utila
+import utilo
 
 
 def work(
@@ -50,8 +50,8 @@ def merge(*items) -> iamraw.PageContentCaptions:
         before = values
         collected[page] = unique(values)
         if collected[page] != before:
-            before: str = utila.NEWLINE.join(str(item) for item in before)
-            utila.error(f'duplicated caption:\n{before}')
+            before: str = utilo.NEWLINE.join(str(item) for item in before)
+            utilo.error(f'duplicated caption:\n{before}')
     # convert to expected data structure
     result = [
         iamraw.PageContentCaption(page=key, content=values)
@@ -65,4 +65,4 @@ def merge(*items) -> iamraw.PageContentCaptions:
 
 
 def unique(items):
-    return utila.unique(items)
+    return utilo.unique(items)

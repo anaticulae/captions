@@ -7,18 +7,18 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import power
+import hoverpower
 import pytest
 import serializeraw
-import utilatest
+import utilotest
 
 import tests
 
 
 @pytest.mark.xfail(reason='software integration')
-@utilatest.requires(power.BACHELOR111_PDF)
+@utilotest.requires(hoverpower.BACHELOR111_PDF)
 def test_listing_bachelor111p45(td, mp):
-    source = power.link(power.BACHELOR111_PDF)
+    source = hoverpower.link(hoverpower.BACHELOR111_PDF)
     cmd = f'-i {source} --pages=45 --code'
     tests.run(cmd, mp=mp)
     codes = td.tmpdir.join('caption__code_caption.yaml')

@@ -7,10 +7,10 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import hoverpower
 import iamraw
-import power
 import pytest
-import utila
+import utilo
 
 import tests
 import tests.utils
@@ -25,19 +25,19 @@ def test_cli_help(mp):
     (21, 2),
 ])
 def test_bachelor90px(page, expected, td, mp):
-    source = power.BACHELOR090_PDF
+    source = hoverpower.BACHELOR090_PDF
     extracted = tests.utils.extract_captions(
         source,
         page,
         td,
         mp,
     )
-    content = utila.select_content(extracted, page)
+    content = utilo.select_content(extracted, page)
     assert len(content) == expected
 
 
 def test_bachelor90p80(td, mp):
-    source = power.BACHELOR090_PDF
+    source = hoverpower.BACHELOR090_PDF
     extracted = tests.utils.extract_captions(
         source,
         80,
@@ -50,7 +50,7 @@ def test_bachelor90p80(td, mp):
 
 
 def test_master116p12(td, mp):
-    source = power.MASTER116_PDF
+    source = hoverpower.MASTER116_PDF
     extracted = tests.utils.extract_captions(
         source,
         12,

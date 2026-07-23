@@ -7,32 +7,32 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import utila
+import utilo
 
 import caption
 
 DESCRIPTION = 'TODO'
 
 CAPTION_DATA = [
-    utila.ResultFile('rawmaker', 'oneline_text_text'),
-    utila.ResultFile('rawmaker', 'oneline_text_positions'),
-    utila.ResultFile('rawmaker', 'border_pages'),
-    utila.ResultFile('groupme', 'footer_footerheader'),
+    utilo.ResultFile('rawmaker', 'oneline_text_text'),
+    utilo.ResultFile('rawmaker', 'oneline_text_positions'),
+    utilo.ResultFile('rawmaker', 'border_pages'),
+    utilo.ResultFile('groupme', 'footer_footerheader'),
 ]
 
 WORKPLAN = [
-    utila.create_step(
+    utilo.create_step(
         name='image',
         inputs=CAPTION_DATA + [
-            utila.Pattern('rawmaker__images_images/*', 'yaml'),
+            utilo.Pattern('rawmaker__images_images/*', 'yaml'),
         ],
         output=('caption',),
     ),
-    utila.create_step(
+    utilo.create_step(
         name='code',
         inputs=CAPTION_DATA + [
-            utila.ResultFile('codero', 'result_result', optional=True),
-            utila.ResultFile(
+            utilo.ResultFile('codero', 'result_result', optional=True),
+            utilo.ResultFile(
                 producer='cleanup',
                 name='oneline_translate_text',
                 optional=True,
@@ -40,19 +40,19 @@ WORKPLAN = [
         ],
         output=('caption',),
     ),
-    utila.create_step(
+    utilo.create_step(
         name='table',
         inputs=CAPTION_DATA + [
-            utila.ResultFile('tablero', 'decide_decide', optional=True),
+            utilo.ResultFile('tablero', 'decide_decide', optional=True),
         ],
         output=('caption',),
     ),
-    utila.create_step(
+    utilo.create_step(
         'result',
         inputs=[
-            utila.ResultFile(caption.PROCESS, 'image_caption', optional=True),
-            utila.ResultFile(caption.PROCESS, 'table_caption', optional=True),
-            utila.ResultFile(caption.PROCESS, 'code_caption', optional=True),
+            utilo.ResultFile(caption.PROCESS, 'image_caption', optional=True),
+            utilo.ResultFile(caption.PROCESS, 'table_caption', optional=True),
+            utilo.ResultFile(caption.PROCESS, 'code_caption', optional=True),
         ],
         output=('result',),
     ),
@@ -60,11 +60,11 @@ WORKPLAN = [
 
 
 def main():
-    utila.featurepack(
+    utilo.featurepack(
         workplan=WORKPLAN,
         root=caption.ROOT,
         featurepackage='caption.feature',
-        config=utila.FeaturePackConfig(
+        config=utilo.FeaturePackConfig(
             description=DESCRIPTION,
             multiprocessed=True,
             name=caption.PROCESS,
