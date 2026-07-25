@@ -51,7 +51,7 @@ def extract(resources):
     gennex.extract(
         resources,
         cleanup=True,
-        # codero=True,
+        codero=True,
         # figureo=True,
         footnote=True,
         headnote=True,
