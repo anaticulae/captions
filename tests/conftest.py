@@ -52,7 +52,7 @@ def extract(resources):
         resources,
         cleanup=True,
         codero=True,
-        # figureo=True,
+        figureo=True,
         footnote=True,
         headnote=True,
         groupme=True,

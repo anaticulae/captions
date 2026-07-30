@@ -38,6 +38,7 @@ content-type = "text/markdown"
 [project.optional-dependencies]
 dev = [
     "codero==1.0.1",
+    "figureo==1.0.1",
     "gennex==1.1.0",
     "headnote==1.0.3",
     "hoverpower==1.5.2",
