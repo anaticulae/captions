@@ -1,6 +1,25 @@
 # CHANGELOG
 
 
+## v1.0.1 (2026-07-31)
+
+### Chores
+
+- **docker**: Install ghostscript to use tablero
+  ([`7e31721`](https://github.com/anaticulae/captions/commit/7e3172190b8a2fc9b0f2903add1794827cb26d5f))
+
+### Testing
+
+- **double**: Disable failing test
+  ([`78fa7d4`](https://github.com/anaticulae/captions/commit/78fa7d4c05fe436272967fdd23f0fa56c0429be3))
+
+- **expected**: Adjust base line
+  ([`672f419`](https://github.com/anaticulae/captions/commit/672f419a17d1d46469da3a493b44dc83bb240137))
+
+- **fix**: Adjust project name
+  ([`2f5b9dd`](https://github.com/anaticulae/captions/commit/2f5b9dd18d6530665d059f70e9ab80125f84b01d))
+
+
 ## v1.0.0 (2026-07-31)
 
 ### Chores
