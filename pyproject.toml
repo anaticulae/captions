@@ -6,7 +6,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "caption"
+name = "captions"
 version = "0.4.6"
 description = ""
 requires-python = ">=3.12"
