@@ -50,6 +50,7 @@ dev = [
     "rawmaker==2.40.5",
     "tablero==1.0.1",
     "utilotest==1.0.5",
+    "verbo==1.23.4",
 ]
 
 [project.urls]
