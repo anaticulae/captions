@@ -1,102 +1,395 @@
-# Changelog
+# CHANGELOG
 
-Every noteable change is logged here.
 
-## v0.4.6 (2023-01-17)
+## v1.0.0 (2026-07-31)
+
+### Chores
+
+- **github**: Add .github
+  ([`73b441a`](https://github.com/anaticulae/captions/commit/73b441ac696d76c2ef88d15ebece5b21ce2b8c3d))
+
+- **pyproject**: Add modern project layout
+  ([`fe6776d`](https://github.com/anaticulae/captions/commit/fe6776d744edc3a92eda1a9604cd73d2b775a02c))
+
+- **pyproject**: Add words
+  ([`d35013a`](https://github.com/anaticulae/captions/commit/d35013ae4eaeb33d9c3199dbe73b4caf52ebe24a))
+
+- **pyproject**: Adjust dependencies
+  ([`f003197`](https://github.com/anaticulae/captions/commit/f003197cc6ee69889328d1debe4f351b5b9a9e7b))
+
+- **pyproject**: Enable codero
+  ([`6148e64`](https://github.com/anaticulae/captions/commit/6148e641efcb25202742d265e44bf029e979d015))
+
+- **pyproject**: Enable tablero
+  ([`7ac6991`](https://github.com/anaticulae/captions/commit/7ac69918799e24d116b036857fdecf8be711745f))
+
+- **pyproject**: Remove outdated setup
+  ([`2728edc`](https://github.com/anaticulae/captions/commit/2728edce9244a074aa9c87fb15508edf10ebb9e2))
+
+- **pyproject**: Rename project
+  ([`eb244d9`](https://github.com/anaticulae/captions/commit/eb244d94dd8c2109f1b2ec721aa895eda818629c))
+
+- **resources**: Enable figureo
+  ([`1ffaeef`](https://github.com/anaticulae/captions/commit/1ffaeef89d69d2e081ec6a57f29fe914221fb3b3))
 
 ### Documentation
 
-* happy New Year! (c4cef0277c27)
+- **rename**: Adjust doc types
+  ([`3972dc2`](https://github.com/anaticulae/captions/commit/3972dc23a60514206a2cabdabfab84e160eb862d))
 
-### Chore
+### Refactoring
 
-* use new pre-step (3edb60b053e0)
-* upgrade requirements.txt (985190a9c538)
-* upgrade Jenkinsfile (83f678fe006e)
-* upgrade pipe library (68438cf01156)
+- **packages**: Adjust names
+  ([`507051d`](https://github.com/anaticulae/captions/commit/507051d18fd3eaf7f205d342e28939e9551668f0))
+
+### Testing
+
+- **resources**: Shrink test data generator
+  ([`6642cd4`](https://github.com/anaticulae/captions/commit/6642cd47fdcdc521b199ac750080c0bba0069688))
+
+
+## v0.4.6 (2023-01-17)
+
+### Chores
+
+- **Jenkins**: Upgrade Jenkinsfile
+  ([`83f678f`](https://github.com/anaticulae/captions/commit/83f678fe006e872950732bd6208f9b32954d4fb1))
+
+- **Jenkins**: Upgrade pipe library
+  ([`68438cf`](https://github.com/anaticulae/captions/commit/68438cf0115683ad84d72ce4abe96ec755193714))
+
+- **Jenkins**: Use new pre-step
+  ([`3edb60b`](https://github.com/anaticulae/captions/commit/3edb60b053e01d698e701d7442af4e805155a1cd))
+
+- **requirements**: Upgrade requirements.txt
+  ([`985190a`](https://github.com/anaticulae/captions/commit/985190a9c538e3500408014dcc1857ce051c3950))
+
+### Documentation
+
+- **copyright**: Happy New Year!
+  ([`c4cef02`](https://github.com/anaticulae/captions/commit/c4cef0277c27e1b72d49f47e81bb455b680338d8))
+
+### Testing
+
+- **refactor**: Use new test runner
+  ([`617eaab`](https://github.com/anaticulae/captions/commit/617eaabc6eb410fcb13e7f1b459b9646d85597a2))
+
 
 ## v0.4.5 (2022-12-21)
 
-### Chore
+### Chores
 
-* use quick install (58e52ff86197)
-* upgrade requirements.txt (8349c244d332)
-* upgrade pipeline (7ab51b0718d1)
+- **Jenkins**: Upgrade pipeline
+  ([`7ab51b0`](https://github.com/anaticulae/captions/commit/7ab51b0718d1be7dcfebd20554acb01055570ff4))
+
+- **requirements**: Upgrade requirements.txt
+  ([`8349c24`](https://github.com/anaticulae/captions/commit/8349c244d332132a6c7432b2c7db3ca15c2578cb))
+
+- **setup**: Use quick install
+  ([`58e52ff`](https://github.com/anaticulae/captions/commit/58e52ff861977ef7dd953644dc1a0ca05d8c48b8))
+
+### Refactoring
+
+- **replace**: Automated replacement
+  ([`817b297`](https://github.com/anaticulae/captions/commit/817b297f4ac27b34c3a6adcab884c3d3e7a6d3f1))
+
+### Testing
+
+- **baseline**: Adjust baseline
+  ([`483c38f`](https://github.com/anaticulae/captions/commit/483c38f7e2cb1561b9cb6043c922a44237265ec2))
+
 
 ## v0.4.4 (2022-11-07)
 
-### Chore
+### Chores
 
-* add opencv to process tablero correctly (a8f301faeb02)
-* upgrade baw to use resources feature (b572e4eea66d)
-* convert nightly to all (68f9d4b6c87f)
-* add headnote step (fafd3a75bbd0)
-* remove default config (52ac739720b8)
-* upgrade requirements.txt (db31786b18fb)
-* upgrade pipe library (d7490e7a4260)
-* upgrade environment (6b891ab7e206)
-* do not run in privileged mode (ede13ba21e30)
+- **baw**: Remove default config
+  ([`52ac739`](https://github.com/anaticulae/captions/commit/52ac739720b868a4ed84215ae11a05185e322f50))
+
+- **Jenkins**: Add opencv to process tablero correctly
+  ([`a8f301f`](https://github.com/anaticulae/captions/commit/a8f301faeb021e49150e9dd772080d7d283b3133))
+
+- **Jenkins**: Convert nightly to all
+  ([`68f9d4b`](https://github.com/anaticulae/captions/commit/68f9d4b6c87f342146488cfce86ed205e5022a9f))
+
+- **Jenkins**: Do not run in privileged mode
+  ([`ede13ba`](https://github.com/anaticulae/captions/commit/ede13ba21e30834486c0fe7e9553ee86df0b7f32))
+
+- **Jenkins**: Upgrade baw to use resources feature
+  ([`b572e4e`](https://github.com/anaticulae/captions/commit/b572e4eea66d3b1144a1caeb8d4fb582b6304e58))
+
+- **Jenkins**: Upgrade environment
+  ([`6b891ab`](https://github.com/anaticulae/captions/commit/6b891ab7e206d0437c2f422319db05c75c5601be))
+
+- **Jenkins**: Upgrade pipe library
+  ([`d7490e7`](https://github.com/anaticulae/captions/commit/d7490e7a42602673011e374b00712088b76ec5fe))
+
+- **requirements**: Upgrade requirements.txt
+  ([`db31786`](https://github.com/anaticulae/captions/commit/db31786b18fb0e045b970e57cb4279c0af0f5f31))
+
+- **resources**: Add headnote step
+  ([`fafd3a7`](https://github.com/anaticulae/captions/commit/fafd3a75bbd0d5d341f32644a58cc20e6a45a938))
+
+### Code Style
+
+- **baw**: Add missing header
+  ([`a9ad199`](https://github.com/anaticulae/captions/commit/a9ad199b0f3d0adc5cc529c59beb6e03ed342705))
+
+### Testing
+
+- **baseline**: Adjust baseline
+  ([`ca08fa6`](https://github.com/anaticulae/captions/commit/ca08fa661092701b8dcfa07f82d3d7de5c5c99d7))
+
 
 ## v0.4.3 (2022-10-01)
 
-### Chore
+### Chores
 
-* save resources if nightly fails (33cdc32ab7f7)
-* upgrade baw (a8b7bc0c69d4)
-* upgrade requirements.txt (0ae3030939e8)
-* extend test data generator (9f68a6c60ded)
-* add missing dev requirement (2c1927e69d68)
-* increase worker count on CI (ce8e7e121f53)
-* add separate generator step (4371729433eb)
-* use new syntax (b998f5fa34b8)
-* add Jenkinsfile (9fefba3818ba)
-* upgrade requirements.txt (2cbf40a995a1)
+- **ci**: Add Jenkinsfile
+  ([`9fefba3`](https://github.com/anaticulae/captions/commit/9fefba3818ba45c7cfe5139d97802b3f1a5bb95a))
 
-## v0.4.2
+- **Jenkinsfile**: Add separate generator step
+  ([`4371729`](https://github.com/anaticulae/captions/commit/4371729433eb39c58b79cc781724b151982ece49))
 
-### Feature
+- **Jenkinsfile**: Save resources if nightly fails
+  ([`33cdc32`](https://github.com/anaticulae/captions/commit/33cdc32ab7f741b46a7e84dc5798e2d2a87ffba1))
 
-* add missing text (98abee3f2ca0)
+- **Jenkinsfile**: Upgrade baw
+  ([`a8b7bc0`](https://github.com/anaticulae/captions/commit/a8b7bc0c69d44dbedafe2dcec5e11547bb2cced9))
 
-## v0.4.1
+- **refactor**: Use new syntax
+  ([`b998f5f`](https://github.com/anaticulae/captions/commit/b998f5fa34b810cee53193915b6590aa341b2845))
 
-### Fix
+- **requirements**: Add missing dev requirement
+  ([`2c1927e`](https://github.com/anaticulae/captions/commit/2c1927e69d680b2205f287d8c768a4fc83f6f009))
 
-* skip empty poc caption (d4d5829d4804)
-* adjust input resource name (0d39d6e335a3)
+- **requirements**: Upgrade requirements.txt
+  ([`0ae3030`](https://github.com/anaticulae/captions/commit/0ae3030939e8240096c8ee40af1eca15238e4d51))
 
-## v0.4.0
+- **requirements**: Upgrade requirements.txt
+  ([`2cbf40a`](https://github.com/anaticulae/captions/commit/2cbf40a995a1845a084a876a73066e2cc1932e77))
 
-### Feature
+- **resources**: Extend test data generator
+  ([`9f68a6c`](https://github.com/anaticulae/captions/commit/9f68a6c60ded6a37ad54a3584129917b5314526a))
 
-* determine caption reference (858e1f1b33e3)
+- **resources**: Increase worker count on CI
+  ([`ce8e7e1`](https://github.com/anaticulae/captions/commit/ce8e7e121f5339e9684da7edb91abdb67af22980))
 
-## v0.3.0
+### Code Style
 
-### Feature
+- **changelog**: Adjust for automation tool
+  ([`0e868be`](https://github.com/anaticulae/captions/commit/0e868beba5844fabf42996715fd082babb84e2e8))
 
-* determine bounding for captions (9ce30084c483)
-* add bounding of code caption (a384f6f403cd)
+### Testing
 
-## v0.2.1
+- **adjust**: Adjust expected after software integration
+  ([`c4c2d20`](https://github.com/anaticulae/captions/commit/c4c2d2022838f2afdcfd57498388d0ed193695f7))
 
-## v0.2.0
+- **utils**: Skip test if resource is not generated
+  ([`f868377`](https://github.com/anaticulae/captions/commit/f8683778a4242d6e1d6badbfc83f52b5f07acaa0))
 
-### Feature
 
-* split multiple caption lines (ea1aae2dcdba)
-* add method to detect double captions (faf74e97fa1d)
+## v0.4.2 (2022-06-10)
 
-### Fix
+### Chores
 
-* improve caption detector and reduce code duplication (fb1029b617bd)
+- **requirements**: Add elements
+  ([`39cd3f8`](https://github.com/anaticulae/captions/commit/39cd3f84c34a75d45bd2a54ac564a42efd92eb2f))
 
-## v0.1.1
+- **requirements**: Upgrade requirements.txt
+  ([`ea5170d`](https://github.com/anaticulae/captions/commit/ea5170dcb69932c20742ea573f217f11d8f323c6))
 
-## v0.1.0
+### Features
 
-### Feature
+- **code**: Add missing text
+  ([`98abee3`](https://github.com/anaticulae/captions/commit/98abee3f2ca0a685c07279c3887ba062ec714484))
 
-* move code from hey (fe1e050dbd3d)
+### Refactoring
 
-## v0.0.0 Initial release
+- **code**: Clarify code
+  ([`00ffcdf`](https://github.com/anaticulae/captions/commit/00ffcdfd76ead07350ea2c2e4aa48047e65de0c3))
+
+
+## v0.4.1 (2022-05-16)
+
+### Bug Fixes
+
+- **cli**: Adjust input resource name
+  ([`0d39d6e`](https://github.com/anaticulae/captions/commit/0d39d6e335a3ffef4272b606f1530daea6039fcc))
+
+- **code**: Skip empty poc caption
+  ([`d4d5829`](https://github.com/anaticulae/captions/commit/d4d5829d4804bcbbf06c096bb68d35567bc4084f))
+
+### Chores
+
+- **requirements**: Fix cleanup
+  ([`ec74107`](https://github.com/anaticulae/captions/commit/ec74107b254980577fbc5e58c335af2decbe0706))
+
+- **requirements**: Fix figureo
+  ([`56c815c`](https://github.com/anaticulae/captions/commit/56c815c7bb023ab2dc00ddd9193355b22e8d50ed))
+
+- **requirements**: Upgrade requirements.txt
+  ([`3895d10`](https://github.com/anaticulae/captions/commit/3895d10055da7b6734bc7c1134c2803f4e999988))
+
+- **resources**: Extend test data generator
+  ([`286d428`](https://github.com/anaticulae/captions/commit/286d42826b6ef9e19a3b09128cea8a6cd3470faa))
+
+- **resources**: Sort resources alphabetically
+  ([`12d78aa`](https://github.com/anaticulae/captions/commit/12d78aae190ccd1a672e7b653a39042c14f99fbd))
+
+### Refactoring
+
+- **rename**: Use new naming
+  ([`f244e89`](https://github.com/anaticulae/captions/commit/f244e891db1bd6e633c9f5bfbda06e7fabf62682))
+
+- **result**: Make unique check more extendable
+  ([`45bc269`](https://github.com/anaticulae/captions/commit/45bc269236d6f7b85aab8d258c4ac6f80dedaa76))
+
+### Testing
+
+- **caption**: Validate master091b
+  ([`ad24b84`](https://github.com/anaticulae/captions/commit/ad24b84a22406f1eebe6e4d11ff27aec93745cb1))
+
+
+## v0.4.0 (2022-04-28)
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`ae621c4`](https://github.com/anaticulae/captions/commit/ae621c41b2917efe38eeb144567048b14f8b5a0e))
+
+- **resources**: Do not generate caption
+  ([`21933ae`](https://github.com/anaticulae/captions/commit/21933ae67097e02882a9eeedca0c03f31534d23e))
+
+### Features
+
+- **processor**: Determine caption reference
+  ([`858e1f1`](https://github.com/anaticulae/captions/commit/858e1f1b33e31ee91495fa8d3a600c2d7a52ace1))
+
+
+## v0.3.0 (2022-04-25)
+
+### Chores
+
+- **requirements**: Adjust tablero, codero
+  ([`df36ff5`](https://github.com/anaticulae/captions/commit/df36ff5793b3a1de3e67c66bc156df822043515d))
+
+- **requirements**: Upgrade requirements.txt
+  ([`29b1834`](https://github.com/anaticulae/captions/commit/29b1834fcbeaafd2e6f2c7f27f5bbfdbca78fddd))
+
+- **resources**: Do not generate magic data
+  ([`d73dff0`](https://github.com/anaticulae/captions/commit/d73dff0ce459b950cbe88ffe8e68523c71f7daa1))
+
+- **resources**: Remove defaults
+  ([`6b65f34`](https://github.com/anaticulae/captions/commit/6b65f345c1f321aae64ac0c0f50fa3ca7c77efed))
+
+### Code Style
+
+- **imports**: Organize imports
+  ([`7ae5e1c`](https://github.com/anaticulae/captions/commit/7ae5e1cec051a26275613dece4767ee15f60852d))
+
+- **index**: Adjust headline
+  ([`4d2d742`](https://github.com/anaticulae/captions/commit/4d2d7426fe233db4c6658355c45614332ea05bd9))
+
+- **rename**: Use improved naming
+  ([`2a23c9d`](https://github.com/anaticulae/captions/commit/2a23c9dcf5741cf7326c653b64af632004329779))
+
+### Features
+
+- **code**: Add bounding of code caption
+  ([`a384f6f`](https://github.com/anaticulae/captions/commit/a384f6f403cd0fb17dca3b275ee454759f6b18bd))
+
+- **processor**: Determine bounding for captions
+  ([`9ce3008`](https://github.com/anaticulae/captions/commit/9ce30084c483fc32524f6496214a891b19d3b739))
+
+### Testing
+
+- **caption**: Adjust expected captions
+  ([`ac52e9b`](https://github.com/anaticulae/captions/commit/ac52e9b35be0281977002b15b2d09840900c90bb))
+
+- **skip**: Skip none generated test
+  ([`a065cab`](https://github.com/anaticulae/captions/commit/a065cab80155c767cd1c241b9a7aacc6009bd2f5))
+
+
+## v0.2.1 (2022-03-28)
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`05d6e98`](https://github.com/anaticulae/captions/commit/05d6e98c897d9af072b72473e2273b61d4967040))
+
+- **resources**: Extend test data generator
+  ([`08e349b`](https://github.com/anaticulae/captions/commit/08e349b8bd2f35bfa7c7534a248e612307c6eab8))
+
+### Code Style
+
+- **requirements**: Format file
+  ([`a6d23c3`](https://github.com/anaticulae/captions/commit/a6d23c3713407427599e904f28f90c0dceb0b535))
+
+### Testing
+
+- **caption**: Validate master063
+  ([`fffdcff`](https://github.com/anaticulae/captions/commit/fffdcff468ce984923411e04ab8fc5ecd2ff3f10))
+
+
+## v0.2.0 (2022-03-27)
+
+### Bug Fixes
+
+- **caption**: Improve caption detector and reduce code duplication
+  ([`fb1029b`](https://github.com/anaticulae/captions/commit/fb1029b617bd80cec21dab9b4c90de678e5de052))
+
+### Code Style
+
+- **docs**: Format docs
+  ([`0498c3b`](https://github.com/anaticulae/captions/commit/0498c3b64b76ab4161b4efdfc2f6ae78560219a5))
+
+### Features
+
+- **processor**: Add method to detect double captions
+  ([`faf74e9`](https://github.com/anaticulae/captions/commit/faf74e97fa1d207ce5a120f6bb5ce41270d4293b))
+
+- **processor**: Split multiple caption lines
+  ([`ea1aae2`](https://github.com/anaticulae/captions/commit/ea1aae2dcdba04d8b64ab3361d831383042381e6))
+
+### Refactoring
+
+- **processor**: Clarify code
+  ([`c0825f4`](https://github.com/anaticulae/captions/commit/c0825f45a4b8b3286c7ccc3609a112b36c38a005))
+
+### Testing
+
+- **adjust**: Adjust unit test after detecting double captions
+  ([`bb912c4`](https://github.com/anaticulae/captions/commit/bb912c43afa310e6d0cd3ef8578e69c3199bf1b1))
+
+- **double**: Add test with two caption in one line
+  ([`b3f20b5`](https://github.com/anaticulae/captions/commit/b3f20b51414d6820b63171d8821f0bab4e8fb61d))
+
+- **rename**: Shorten naming
+  ([`b2f2c81`](https://github.com/anaticulae/captions/commit/b2f2c81debe99bb5d028ef4089db812d5482c169))
+
+
+## v0.1.1 (2022-03-24)
+
+### Chores
+
+- **setup**: Add missing package
+  ([`d75f721`](https://github.com/anaticulae/captions/commit/d75f7210f3f6d2d746604b048810c35b2af93039))
+
+### Code Style
+
+- **format**: Format code
+  ([`d02191d`](https://github.com/anaticulae/captions/commit/d02191df74b0d292d7c1f04833cb1d9d2ec42f3e))
+
+
+## v0.1.0 (2022-03-24)
+
+### Features
+
+- **move**: Move code from hey
+  ([`fe1e050`](https://github.com/anaticulae/captions/commit/fe1e050dbd3dcfd742b670d9a69817d138c7e5d7))
+
+
+## v0.0.0 (2022-03-24)
+
+- Initial Release
