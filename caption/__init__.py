@@ -10,7 +10,7 @@
 import importlib.metadata
 import os
 
-PROCESS = 'caption'
-__version__ = importlib.metadata.version(PROCESS)
+__version__ = importlib.metadata.version('captions')
 
+PROCESS = 'caption'
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))

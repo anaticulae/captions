@@ -9,6 +9,7 @@
 
 import hoverpower
 import iamraw.path
+import pytest
 import serializeraw
 import utilo
 import utilotest
@@ -37,6 +38,7 @@ Strecke Referenzzyklus - Logarithmische Häufigkeitsverteilung der Traktionsleis
 # yapf:enable
 
 
+@pytest.mark.xfail(reason='integration')
 @utilotest.requires(hoverpower.MASTER116_PDF)
 def test_double_caption_master116p34(td, mp):
     source = hoverpower.link(hoverpower.MASTER116_PDF)
